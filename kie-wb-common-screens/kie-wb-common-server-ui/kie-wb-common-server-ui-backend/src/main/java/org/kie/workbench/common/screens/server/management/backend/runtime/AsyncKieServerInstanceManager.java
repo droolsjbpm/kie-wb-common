@@ -70,6 +70,10 @@ public class AsyncKieServerInstanceManager extends KieServerInstanceManager {
     }
 
     @Override
+    public boolean isAsync() {
+        return true;
+    }
+    @Override
     public List<Container> startScanner(final ServerTemplate serverTemplate,
                                         final ContainerSpec containerSpec,
                                         final long interval) {
